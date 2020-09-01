@@ -1,6 +1,18 @@
 # task_1
 
-Add a short description here!
+API запускается с файла scripts/main.py, команда:
+
+uvicorn main:app --reload
+
+Взаимодействие осуществляется через командную строку (не успел сделать через html)
+
+Запрос вида (пример) выдает товары по категориям:
+
+http://localhost:8000/sessions/u11113
+
+С дополнительными параметрами выдает предсказание пола
+
+http://localhost:8000/sessions/u11113?predict=true&model=knn
 
 ## Description
 
