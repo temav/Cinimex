@@ -40,9 +40,9 @@ def read_item(session_id: str, predict: Optional[str]=None, model: Optional[str]
         scaler = pickle.load(open(scaler_filename, 'rb'))
 
         if (model == 'rfc'):
-            model_file = '\\notebooks\\rfc_model.sav'
+            model_file = '\\models\\rfc_model.sav'
         elif (model == 'knn'):
-            model_file = '\\notebooks\\knn_model.sav'
+            model_file = '\\models\\knn_model.sav'
 
         model_filename = path.normpath(path.abspath(path\
                                                     .join(__file__,'../../')) + model_file)
