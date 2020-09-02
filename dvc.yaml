@@ -1,0 +1,13 @@
+stages:
+  loading:
+    cmd: python scripts/processing/load.py data/interim/df_general.gzip
+    deps:
+    - scripts/processing/load.py
+    outs:
+    - data/interim/df_general.gzip
+  preprocess:
+    cmd: python scripts/processing/preprocess.py data/preprocessed/df_final.gzip
+    deps:
+    - scripts/processing/preprocess.py
+    outs:
+    - data/preprocessed/df_final.gzip
