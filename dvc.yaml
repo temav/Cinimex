@@ -11,3 +11,8 @@ stages:
     - scripts/processing/preprocess.py
     outs:
     - data/preprocessed/df_final.gzip
+  reporting:
+    cmd: python scripts/report/report_execution.py notebooks/Analysis.ipynb
+    deps:
+    - notebooks/Analysis.ipynb
+    - scripts/report/report_execution.py

@@ -10,7 +10,14 @@ preprocess:
   cmd: python scripts/processing/preprocess.py data/preprocessed/df_final.gzip
   deps:
   - path: scripts/processing/preprocess.py
-    md5: 4b9a40541c58f4aa5ae6a755df5c213f
+    md5: f23972f7aaa143218f9e48af87b1fd86
   outs:
   - path: data/preprocessed/df_final.gzip
-    md5: 93427d393fe3a63a72b6f896f7477ef1
+    md5: 7b3db5035c3379b5d783adc5e2766cdd
+reporting:
+  cmd: python scripts/report/report_execution.py notebooks/Analysis.ipynb
+  deps:
+  - path: notebooks/Analysis.ipynb
+    md5: 34d94c264b2e073f8f13905ecbedc93f
+  - path: scripts/report/report_execution.py
+    md5: c5c61cd2a0d70150f5952379c5628e11
