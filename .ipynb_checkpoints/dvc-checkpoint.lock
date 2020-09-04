@@ -1,0 +1,13 @@
+loading:
+  cmd: python scripts/processing/load.py
+  deps:
+  - path: scripts/processing/load.py
+    md5: 4f99380aa56a132def5b192c8d660604
+preprocess:
+  cmd: python scripts/processing/preprocess.py data/preprocessed/df_final.gzip
+  deps:
+  - path: scripts/processing/preprocess.py
+    md5: 4b9a40541c58f4aa5ae6a755df5c213f
+  outs:
+  - path: data/preprocessed/df_final.gzip
+    md5: 93427d393fe3a63a72b6f896f7477ef1
