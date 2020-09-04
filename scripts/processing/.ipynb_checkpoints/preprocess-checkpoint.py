@@ -1,6 +1,6 @@
 import pandas as pd
 
-df_general = pd.read_parquet('data/raw/df_general.gzip')
+df_general = pd.read_parquet('data/interim/df_general.gzip')
 
 df_gen_train = df_general.dropna()
 duration = (pd.to_datetime(df_gen_train['end_time'])-
@@ -11,7 +11,7 @@ df_gen_train['duration'] = duration
 df_orders = df_gen_train.groupby('session_id')\
                         .nunique()\
                         .drop(labels=['start_time', 'end_time', 'gender',
-                                      'duration', 'sequence_order'], axis=1)
+                                      'duration'], axis=1)
 
 df_duration = df_gen_train.groupby('session_id').mean()['duration']
 
